@@ -1,5 +1,5 @@
 #--Main----#
-git+https://github.com/Godstime315/Pyrogram
+git+https://github.com/ihyvesta/Pyrogram
 tgcrypto==1.2.5
 requests
 bs4==0.0.1
