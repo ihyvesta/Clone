@@ -6,14 +6,8 @@ RUN apt install git -y
 COPY requirements.txt /requirements.txt
 
 RUN mkdir /Clone
-
 WORKDIR /Clone
-
 RUN git --version
-
-RUN git clone https://github.com/ihyvesta/Pyrogram /tmp/test-clone
-
 RUN pip3 install -U pip && pip3 install -U -r /requirements.txt
-
 COPY start.sh /start.sh
 CMD ["/bin/bash", "/start.sh"]
