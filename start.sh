@@ -1,11 +1,14 @@
-if [ -z $UPSTREAM_REPO ]
+#!/bin/bash
+
+if [ -z "$UPSTREAM_REPO" ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/ihyvesta/Clone.git /DQ
+  git clone https://github.com/ihyvesta/Clone.git /Clone
 else
-  echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /Clone
+  echo "Cloning Custom Repo from $UPSTREAM_REPO"
+  git clone "$UPSTREAM_REPO" /Clone
 fi
-pip3 install -U -r /requirements.txt
-echo "Starting Clone...."
-python3 bot.py
+
+pip3 install -U -r /Clone/requirements.txt
+echo "Starting Clone..."
+python3 /Clone/bot.py
